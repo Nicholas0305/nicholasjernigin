@@ -1,10 +1,10 @@
 import App from "./App";
-
+import MainPage from "./components/home/MainPage";
 const routes = [
   {
     path: "/",
     element: <App />,
-    children: [{ path: "/", element: <LoginPage /> }],
+    children: [{ path: "/", element: <MainPage /> }],
   },
 ];
 
