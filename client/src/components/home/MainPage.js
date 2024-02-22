@@ -1,9 +1,11 @@
 import React from "react";
-import MyComponent from "./MyComponent";
+import Navbar from "./Navbar";
+import IntroSection from "./IntroSection";
 function MainPage() {
   return (
-    <div>
-      <MyComponent />
+    <div id="mainpage-container">
+      <Navbar />
+      <IntroSection />
     </div>
   );
 }
