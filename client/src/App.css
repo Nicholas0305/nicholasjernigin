@@ -8,18 +8,218 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   margin-bottom: 10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.2)
+  );
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow */
+  z-index: 1000;
 }
+
 .navbar h2 {
   position: relative;
   font-weight: bold;
   margin-left: 15px;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.navbar h2:hover {
+  color: dodgerblue; /* Change color on hover */
+  animation: shake 0.5s ease; /* Apply animation on hover */
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(3px);
+  }
 }
 /* Intro Section */
 #intro-section {
   display: flex;
-  margin-top: 200px;
+  margin-top: 100px;
   justify-content: center;
+}
+.intro-body {
+  max-width: 250px;
+  margin-right: 50px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInSlideAnimation 2s ease-in-out forwards;
+}
+.intro-body p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+  color: grey;
+}
+
+@keyframes fadeInSlideAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#portrait {
+  border-radius: 125px;
+  background-color: black;
+  opacity: 0; /* Start with opacity 0 */
+  transform: translateZ(-100px); /* Start with a translation along the Z-axis */
+  animation: slideInAnimation 2s ease-in-out forwards; /* Apply slide-in animation */
+}
+
+@keyframes slideInAnimation {
+  from {
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateZ(
+      -100px
+    ); /* Start with a translation along the Z-axis */
+  }
+  to {
+    opacity: 1; /* End with opacity 1 */
+    transform: translateZ(0); /* End with no translation along the Z-axis */
+  }
+}
+#footer {
+  margin-top: 10px;
+  width: 100vw;
+  height: 20vh;
+  background-color: #222;
+}
+.skills-container {
+  display: flex; /* Use flexbox */
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+.skills-container {
+  opacity: 0; /* Start with opacity 0 */
+  transform: translateX(-100%); /* Start offscreen to the left */
+  animation: slideInFromLeft 1s forwards; /* Apply animation */
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%); /* Start offscreen to the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Slide into view */
+  }
+}
+.skills-container > div {
+  margin-right: 20px; /* Add space between lists */
+}
+
+.skills-container > div:last-child {
+  margin-right: 0; /* Remove margin for the last div */
+}
+
+.skills-container h1 {
+  margin-bottom: 5px; /* Add some space below headings */
+}
+
+.skills-container ul {
+  padding: 0;
+  list-style-type: none; /* Remove default list styles */
+}
+
+.skills-container ul li {
+  margin-bottom: 5px; /* Add some space between list items */
+  font-size: 20px;
+  color: grey;
+  font-style: oblique;
+}
+#skills-image {
+  border-radius: 5px;
+  margin-top: 10px;
+}
+#bg-video {
+  margin-top: 60px;
+  z-index: -1; /* Ensure video is behind other content */
+  width: 100vw;
+  height: 200px;
+  object-fit: cover;
+  filter: "brightness(10%)";
+}
+#project-section {
+  margin-top: 30px;
+  display: flex;
+  justify-content: left;
+  margin-left: 30px;
+}
+#project-section ul {
+  list-style: none;
+}
+.project-card {
+  border-radius: 5px;
+  width: 450px;
+  height: 200px;
+}
+.outer-scrolling-container {
+  display: flex;
+  justify-content: center;
+}
+.scrolling-container {
+  width: 50%; /* Set the width of the container */
+  overflow: hidden; /* Hide any content that overflows the container */
+}
+
+.scrolling-paragraph {
+  white-space: nowrap; /* Prevent the text from wrapping to the next line */
+  animation: scrollAnimation 40s linear infinite; /* Apply the animation */
+  font-size: 30px;
+  color: grey;
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(-300%); /* Start offscreen to the right */
+  }
+  100% {
+    transform: translateX(0%); /* End offscreen to the left */
+  }
+}
+a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust the distance of the underline from the text */
+  width: 0;
+  height: 2px; /* Adjust the thickness of the underline */
+  background-color: dodgerblue; /* Adjust the color of the underline */
+  transition: width 0.3s ease; /* Add transition for smooth animation */
+}
+
+a:hover::after {
+  width: 100%; /* Expand the width of the underline on hover */
 }
