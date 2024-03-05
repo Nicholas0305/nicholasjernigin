@@ -1,11 +1,11 @@
 import "./App.css";
-import { Outlet } from "react-router-dom";
 
+import MainPage from "./components/MainPage";
 function App() {
   return (
     <div className="app">
       <div>
-        <Outlet />
+        <MainPage />
       </div>
     </div>
   );

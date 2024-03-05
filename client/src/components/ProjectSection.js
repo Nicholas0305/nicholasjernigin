@@ -1,6 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import amirite from "../pictures/amirite.png";
+import websitePicture from "../pictures/website_project.png";
 function ProjectSection() {
   return (
     <div id="project-section">
@@ -13,7 +15,7 @@ function ProjectSection() {
       <ul>
         <li>
           <div className="project-card">
-            <img src="/pictures/amirite.png" alt="Project Image" />
+            <img src={amirite} alt="Project " />
             <a
               href="https://github.com/Nicholas0305"
               className="project-description"
@@ -24,7 +26,7 @@ function ProjectSection() {
         </li>
         <li>
           <div className="project-card">
-            <img src="/pictures/website_project.png" alt="Project Image" />
+            <img src={websitePicture} alt="Project " />
             <a
               href="https://github.com/Nicholas0305"
               className="project-description"

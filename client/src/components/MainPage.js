@@ -5,8 +5,7 @@ import SkillsList from "./SkillsList";
 import AboutSection from "./AboutSection";
 import ProjectSection from "./ProjectSection";
 import Footer from "./Footer";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
 function MainPage() {
   return (
     <div id="mainpage-container">

@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import skillsImg from "../pictures/skills.png";
 function SkillsList() {
   return (
     <div className="skills-container">
@@ -15,9 +16,10 @@ function SkillsList() {
 
         <img
           id="skills-image"
-          src="/pictures/skills.png"
+          src={skillsImg}
           width="300"
           height="200"
+          alt="skills-img"
         />
       </div>
       <div>
