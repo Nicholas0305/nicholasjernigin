@@ -5,6 +5,8 @@ import SkillsList from "./SkillsList";
 import AboutSection from "./AboutSection";
 import ProjectSection from "./ProjectSection";
 import Footer from "./Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 function MainPage() {
   return (
     <div id="mainpage-container">
@@ -23,7 +25,9 @@ function MainPage() {
         </div>
       </div>
       <AboutSection />
-      <ProjectSection />
+      <div id="project-section-outer-container">
+        <ProjectSection />
+      </div>
       <Footer />
     </div>
   );

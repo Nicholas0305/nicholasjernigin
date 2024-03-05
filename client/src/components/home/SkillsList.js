@@ -1,9 +1,18 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 function SkillsList() {
   return (
     <div className="skills-container">
       <div>
-        <h1>Skills</h1>
+        <div id="skills-header-container">
+          <h1 id="skills-header">Skills</h1>
+          <h1 id="skills-description">
+            {"  "}
+            to pay the bills <FontAwesomeIcon icon={faCheckCircle} />
+          </h1>
+        </div>
+
         <img
           id="skills-image"
           src="/pictures/skills.png"
