@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/nicholasjernigin/static/css/main.fb2600eb.css",
+    "main.js": "/nicholasjernigin/static/js/main.6e82f9de.js",
+    "index.html": "/nicholasjernigin/index.html",
+    "main.fb2600eb.css.map": "/nicholasjernigin/static/css/main.fb2600eb.css.map",
+    "main.6e82f9de.js.map": "/nicholasjernigin/static/js/main.6e82f9de.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb2600eb.css",
+    "static/js/main.6e82f9de.js"
+  ]
+}
