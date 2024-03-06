@@ -55,6 +55,7 @@ body {
   margin-top: 100px;
   margin-bottom: 300px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .intro-body {
   width: 25%;
@@ -472,4 +473,38 @@ a:hover::after {
 
 #skills-lists-container:hover {
   transform: scale(1.05); /* Scale up by 5% on hover */
+}
+
+/* For screens smaller than 768px (typical phone portrait mode) */
+@media only screen and (max-width: 700px) {
+  .navbar {
+    padding: 5px; /* Decrease padding for the navbar */
+    width: 100%;
+  }
+
+  .intro-body {
+    width: 80%; /* Adjust width to fit smaller screens */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  #intro-section {
+    margin-bottom: 100px; /* Decrease bottom margin */
+  }
+
+  .skills-container {
+    flex-direction: column; /* Stack skills vertically */
+  }
+
+  #skills-lists-container {
+    width: 100%; /* Adjust width to fit smaller screens */
+  }
+
+  #skills-lists-container:hover {
+    transform: none; /* Disable scaling on hover */
+  }
+
+  #project-section {
+    justify-content: center; /* Center project section */
+    margin-left: 0; /* Remove left margin */
+  }
 }
