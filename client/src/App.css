@@ -53,15 +53,40 @@ body {
 #intro-section {
   display: flex;
   margin-top: 100px;
+  margin-bottom: 300px;
   justify-content: center;
 }
 .intro-body {
+  width: 25%;
+  background: black; /* Semi-transparent white background */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+    inset 0 0 20px rgba(255, 255, 255, 0.5); /* Box shadow and inner shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+  margin-bottom: 20px;
   max-width: 250px;
   margin-right: 50px;
   opacity: 0;
   transform: translateY(50px);
   animation: fadeInSlideAnimation 2s ease-in-out forwards;
 }
+
+.intro-body:hover {
+  transform: translateY(40px); /* Adjust translateY value */
+}
+
+@keyframes fadeInSlideAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .intro-body p {
   margin: 0;
   padding: 0;
@@ -104,11 +129,10 @@ body {
 .skills-container {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 30px;
 }
 .skills-container {
   opacity: 0;
-  transform: translateX(-100%);
+  transform: translateX(-200%);
   animation: slideInFromLeft 1s forwards;
 }
 
@@ -157,6 +181,10 @@ body {
   object-fit: cover;
   filter: "brightness(10%)";
 }
+#project-section-container {
+  margin-top: 250px;
+  margin-bottom: 50px;
+}
 #project-section {
   margin-top: 30px;
   display: flex;
@@ -181,6 +209,7 @@ body {
 .outer-scrolling-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 200px;
 }
 .scrolling-container {
   width: 50%;
@@ -345,4 +374,102 @@ a:hover::after {
 }
 #rocket {
   color: dodgerblue;
+}
+
+#education-section-blocks-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap between blocks */
+  opacity: 0;
+  transition: opacity 2s ease; /* Smooth transition */
+  animation: fadeInAnimation 2s ease forwards; /* Animation to fade in */
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.education-section-blocks-container.visible {
+  opacity: 1;
+}
+#education-section-title-container {
+  display: flex;
+  justify-content: center;
+}
+#education-section-title-container h2 {
+  font-size: 24px; /* Adjust font size */
+
+  color: white; /* Text color */
+  text-transform: uppercase; /* Convert text to uppercase */
+
+  animation: fadeInUp 1s ease; /* Add animation */
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Move title down */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Move title up */
+  }
+}
+.education-block {
+  width: 25%;
+  background: black; /* Semi-transparent white background */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+    inset 0 0 20px rgba(255, 255, 255, 0.5); /* Box shadow and inner shadow */
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.education-block:hover {
+  transform: translateY(-5px); /* Move block up slightly on hover */
+}
+
+.education-header {
+  color: dodgerblue; /* Header color */
+  margin-bottom: 10px; /* Margin below header */
+}
+
+.education-paragraph {
+  color: white; /* Paragraph color */
+}
+
+.education-list {
+  margin-top: 10px; /* Margin above list */
+  list-style-type: none; /* Remove bullet points */
+  padding: 0;
+}
+
+.education-list li {
+  padding: 5px 0; /* Vertical padding */
+  color: white;
+}
+#education-section-title {
+  margin-bottom: 20px;
+  height: fit-content;
+}
+#skills-lists-container {
+  width: 40vw;
+  background: black; /* Semi-transparent white background */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+    inset 0 0 20px rgba(255, 255, 255, 0.5); /* Box shadow and inner shadow */
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#skills-lists-container:hover {
+  transform: scale(1.05); /* Scale up by 5% on hover */
 }

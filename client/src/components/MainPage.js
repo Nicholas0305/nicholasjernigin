@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import IntroSection from "./IntroSection";
 import SkillsList from "./SkillsList";
+import EducationSection from "./EducationSection";
 import AboutSection from "./AboutSection";
 import ProjectSection from "./ProjectSection";
 import Footer from "./Footer";
@@ -23,7 +24,8 @@ function MainPage() {
           </p>
         </div>
       </div>
-      <AboutSection />
+      <EducationSection />
+      {/* <AboutSection /> */}
       <div id="project-section-outer-container">
         <ProjectSection />
       </div>

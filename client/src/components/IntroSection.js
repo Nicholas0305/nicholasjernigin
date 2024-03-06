@@ -4,7 +4,7 @@ import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import portrait from "../pictures/portrait.png";
 function IntroSection() {
   return (
-    <section id="intro-section">
+    <div id="intro-section">
       <div className="intro-body">
         <h2>
           Hi I'm Nick, a Full Stack Software Engineer{" "}
@@ -26,7 +26,7 @@ function IntroSection() {
           alt="portrait"
         />
       </div>
-    </section>
+    </div>
   );
 }
 export default IntroSection;
