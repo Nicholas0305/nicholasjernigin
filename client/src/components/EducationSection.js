@@ -1,27 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
-function EducationSection() {
+
+const EducationSection = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check if user has scrolled past a certain point (e.g., 100 pixels)
-      if (window.scrollY > 850) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 1600);
     };
 
-    // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <div id="education-section-container">
       <div id="education-section-title-container">
@@ -30,7 +25,7 @@ function EducationSection() {
           <FontAwesomeIcon color="dodgerBlue" icon={faGraduationCap} />
         </h2>
       </div>
-      <div id={isScrolled ? "education-section-blocks-container" : ""}>
+      <div id={isScrolled ? "education-section-blocks-container" : "null"}>
         <div className="education-block">
           <h2 className="education-header">Flatiron</h2>
           <p className="education-paragraph">
@@ -60,5 +55,6 @@ function EducationSection() {
       </div>
     </div>
   );
-}
+};
+
 export default EducationSection;

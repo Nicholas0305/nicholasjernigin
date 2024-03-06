@@ -1,26 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
-import { faTools } from "@fortawesome/free-solid-svg-icons";
-import { faHandshake } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCheckCircle,
+  faTools,
+  faHandshake,
+} from "@fortawesome/free-solid-svg-icons";
 import skillsImg from "../pictures/skills.png";
+
 function SkillsList() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check if user has scrolled past a certain point (e.g., 100 pixels)
-      if (window.scrollY > 100) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 100);
     };
 
-    // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -59,7 +55,7 @@ function SkillsList() {
             <li>CSS</li>
             <li>React</li>
             <li>Flask</li>
-            <li>BootStrap</li>
+            <li>Bootstrap</li>
           </ul>
         </div>
         <div>
@@ -79,4 +75,5 @@ function SkillsList() {
     </div>
   );
 }
+
 export default SkillsList;

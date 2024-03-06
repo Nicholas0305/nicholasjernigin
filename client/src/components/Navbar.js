@@ -4,7 +4,7 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 function Navbar() {
   return (
     <nav className="navbar">
-      <h2>
+      <h2 href="navbar">
         <FontAwesomeIcon icon={faGlobe} /> Nicholas Jernigin
       </h2>
     </nav>

@@ -1,6 +1,7 @@
 body {
   background-color: black;
   color: white;
+  overflow-x: hidden;
 }
 /* Navbar */
 .navbar {
@@ -59,6 +60,7 @@ body {
 }
 .intro-body {
   width: 25%;
+  height: fit-content;
   background: black; /* Semi-transparent white background */
   border-radius: 8px;
   padding: 20px;
@@ -70,13 +72,15 @@ body {
   margin-right: 50px;
   opacity: 0;
   transform: translateY(50px);
-  animation: fadeInSlideAnimation 2s ease-in-out forwards;
+  animation: fadeInSlideAnimation 3s ease-in-out forwards;
 }
 
 .intro-body:hover {
   transform: translateY(40px); /* Adjust translateY value */
 }
-
+.null {
+  opacity: 0;
+}
 @keyframes fadeInSlideAnimation {
   0% {
     opacity: 0;
@@ -92,9 +96,9 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  line-height: 1.5;
-  text-align: justify;
+  margin-bottom: 10px;
   color: grey;
+  font-size: 1.25em;
 }
 
 @keyframes fadeInSlideAnimation {
@@ -113,7 +117,7 @@ body {
   background-color: black;
   opacity: 0;
   transform: translateZ(-100px);
-  animation: slideInAnimation 2s ease-in-out forwards;
+  animation: slideInAnimation 1s ease-in-out forwards;
 }
 
 @keyframes slideInAnimation {
@@ -140,7 +144,7 @@ body {
 @keyframes slideInFromLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(200%);
   }
   100% {
     opacity: 1;
@@ -184,7 +188,7 @@ body {
 }
 #project-section-container {
   margin-top: 250px;
-  margin-bottom: 50px;
+  margin-bottom: 250px;
 }
 #project-section {
   margin-top: 30px;
@@ -258,6 +262,9 @@ a:hover::after {
   position: relative;
   display: inline-block;
   overflow: hidden;
+  margin-bottom: 10px;
+  opacity: 0; /* Start with opacity 0 */
+  animation: slideInAnimation 1s forwards; /* Animation to slide in */
 }
 
 .project-card img {
@@ -280,6 +287,7 @@ a:hover::after {
 .project-card:hover img {
   filter: brightness(50%);
 }
+
 .project-card:hover {
   border-color: dodgerblue;
 }
@@ -288,10 +296,22 @@ a:hover::after {
   opacity: 1;
   color: white;
 }
+
+@keyframes slideInAnimation {
+  from {
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateX(-250%); /* Start position */
+  }
+  to {
+    opacity: 1; /* End with opacity 1 */
+    transform: translateX(0); /* End position */
+  }
+}
+
 #footer {
   margin-top: 10px;
   width: 100vw;
-  height: 35vh;
+  height: fit-content;
   background-color: #222;
 }
 
@@ -341,8 +361,16 @@ a:hover::after {
 }
 .vertical-line {
   border-right: 2px solid dodgerblue; /* Adjust thickness and color as needed */
-  height: 225px; /* Adjust height as needed */
+  height: 425px; /* Adjust height as needed */
   padding: 20px;
+}
+#project-header {
+  margin-right: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#hammer-icon {
+  margin-left: 5px;
 }
 #skills-header-container {
   display: flex; /* Use flexbox */
@@ -442,6 +470,7 @@ a:hover::after {
 
 .education-paragraph {
   color: white; /* Paragraph color */
+  font-size: 1.25em;
 }
 
 .education-list {
@@ -453,6 +482,7 @@ a:hover::after {
 .education-list li {
   padding: 5px 0; /* Vertical padding */
   color: white;
+  font-size: 1.25em;
 }
 #education-section-title {
   margin-bottom: 20px;
@@ -480,6 +510,7 @@ a:hover::after {
   .navbar {
     padding: 5px; /* Decrease padding for the navbar */
     width: 100%;
+    height: fit-content;
   }
 
   .intro-body {
@@ -502,9 +533,35 @@ a:hover::after {
   #skills-lists-container:hover {
     transform: none; /* Disable scaling on hover */
   }
-
-  #project-section {
-    justify-content: center; /* Center project section */
-    margin-left: 0; /* Remove left margin */
+  #education-section-container {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
   }
+  #education-section-blocks-container {
+  }
+  #education-block {
+    width: fit-content;
+    height: fit-content;
+  }
+  #project-section {
+    flex-direction: column;
+    width: fit-content;
+    margin: 0; /* Remove left margin */
+  }
+  #project-section ul {
+    padding: 0;
+    width: fit-content;
+  }
+  .project-card {
+    width: fit-content;
+    height: fit-content;
+  }
+  #footer {
+    width: fit-content;
+    height: fit-content;
+  }
+}
+p {
+  font-size: 10%;
 }

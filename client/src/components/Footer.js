@@ -84,9 +84,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div id="end-message-container">
-        Built from scratch by me! Design inspired by Apple
-      </div>
+      <div id="end-message-container">Built from scratch by me!</div>
     </footer>
   );
 }

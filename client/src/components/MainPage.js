@@ -24,11 +24,12 @@ function MainPage() {
           </p>
         </div>
       </div>
-      <EducationSection />
-      {/* <AboutSection /> */}
       <div id="project-section-outer-container">
         <ProjectSection />
       </div>
+      <EducationSection />
+      {/* <AboutSection /> */}
+
       <Footer />
     </div>
   );

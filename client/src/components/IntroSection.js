@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import portrait from "../pictures/portrait.png";
 function IntroSection() {
   return (
@@ -16,6 +17,15 @@ function IntroSection() {
           gained valuable experience by collaborating on projects with fellow
           alumni that align with real industry standards.{" "}
         </p>
+        <a
+          className="animated-a"
+          href="https://www.linkedin.com/in/nicholas-jernigin-0a46362a2"
+        >
+          Linkedin <FontAwesomeIcon icon={faLinkedin} />
+        </a>
+        <a className="animated-a" href="https://github.com/Nicholas0305">
+          Github <FontAwesomeIcon icon={faGithub} />
+        </a>
       </div>
       <div>
         <img
