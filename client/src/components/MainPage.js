@@ -5,6 +5,7 @@ import SkillsList from "./SkillsList";
 import EducationSection from "./EducationSection";
 import AboutSection from "./AboutSection";
 import ProjectSection from "./ProjectSection";
+import CommittedToSection from "./CommittedToSection";
 import Footer from "./Footer";
 
 function MainPage() {
@@ -29,7 +30,7 @@ function MainPage() {
       </div>
       <EducationSection />
       {/* <AboutSection /> */}
-
+      <CommittedToSection />
       <Footer />
     </div>
   );
