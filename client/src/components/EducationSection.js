@@ -22,6 +22,26 @@ function EducationSection() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const [post, setPost] = useState(null);
+
+  useEffect(() => {
+    const fetchPost = async () => {
+      try {
+        const response = await fetch(
+          "https://graph.instagram.com/me/media?fields=id,media_url,caption&access_token="
+        );
+        const data = await response.json();
+        // Assuming the first item in the data array is the most recent post
+        setPost(data.data.slice(0, 3));
+        console.log("fetch call");
+      } catch (error) {
+        console.error("Error fetching Instagram post:", error);
+      }
+    };
+
+    fetchPost();
+  }, []);
   return (
     <div id="education-section-container">
       <div id="education-section-title-container">
@@ -57,6 +77,20 @@ function EducationSection() {
             <li>Testout - PC Pro Certification</li>
           </ul>
         </div>
+      </div>
+
+      <div className="posts-container">
+        {post &&
+          post.map((post) => (
+            <div className="post-container" key={post.id}>
+              <img
+                className="post-image"
+                src={post.media_url}
+                alt={post.caption}
+              />
+              <p className="post-caption">{post.caption}</p>
+            </div>
+          ))}
       </div>
     </div>
   );

@@ -508,3 +508,55 @@ a:hover::after {
     margin-left: 0; /* Remove left margin */
   }
 }
+.posts-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow posts to wrap to the next line */
+}
+
+.post-container {
+  flex: 0 0 calc(33.33% - 20px); /* Adjust width and margin */
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.post-container:hover {
+  transform: translateY(-5px); /* Add a subtle hover effect */
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd; /* Add a border to separate image and caption */
+}
+
+.post-caption {
+  padding: 15px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+  border-top: 1px solid #ddd; /* Add a border at the top for separation */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.post-caption:hover {
+  background-color: #eaeaea;
+}
+
+.post-caption p {
+  margin: 0; /* Remove default margin for paragraphs */
+}
+
+.post-caption a {
+  color: #007bff; /* Change link color */
+  text-decoration: none;
+}
+
+.post-caption a:hover {
+  text-decoration: underline;
+}
