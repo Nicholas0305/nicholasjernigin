@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar";
 import IntroSection from "./IntroSection";
 import SkillsList from "./SkillsList";
@@ -9,6 +9,10 @@ import CommittedToSection from "./CommittedToSection";
 import Footer from "./Footer";
 
 function MainPage() {
+  const [inputValue, setInputValue] = useState("");
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
   return (
     <div id="mainpage-container">
       <Navbar />
@@ -25,6 +29,7 @@ function MainPage() {
           </p>
         </div>
       </div>
+
       <div id="project-section-outer-container">
         <ProjectSection />
       </div>
@@ -35,4 +40,5 @@ function MainPage() {
     </div>
   );
 }
+
 export default MainPage;

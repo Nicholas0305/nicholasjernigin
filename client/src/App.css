@@ -601,3 +601,6 @@ a:hover::after {
 .committedTo-card:hover {
   transform: translateY(-5px); /* Move block up slightly on hover */
 }
+form {
+  color: black important;
+}
