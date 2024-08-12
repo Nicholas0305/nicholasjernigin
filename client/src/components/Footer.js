@@ -27,14 +27,7 @@ function Footer() {
             </li>
             <li>
               <a href="mailto:najernigin@gmail.com">
-                Personal: najernigin@gmail.com{" "}
-                <FontAwesomeIcon icon={faEnvelope} />
-              </a>
-            </li>
-            <li>
-              <a href="mailto:jerniginbusiness@gmail.com">
-                Business: jerniginbusiness@gmail.com{" "}
-                <FontAwesomeIcon icon={faEnvelope} />
+                najernigin@gmail.com <FontAwesomeIcon icon={faEnvelope} />
               </a>
             </li>
           </ul>
