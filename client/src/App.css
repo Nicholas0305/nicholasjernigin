@@ -406,37 +406,19 @@ a:hover::after {
   color: dodgerblue;
 }
 
-#education-section-blocks-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Adjust the gap between blocks */
-  opacity: 0;
-  transition: opacity 2s ease; /* Smooth transition */
-  animation: fadeInAnimation 2s ease forwards; /* Animation to fade in */
-  margin-bottom: 250px;
+#education-section-container {
+  width: 100%;
 }
 
-@keyframes fadeInAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.education-section-blocks-container.visible {
-  opacity: 1;
-}
 #education-section-title-container {
   display: flex;
   justify-content: center;
 }
+
 #education-section-title-container h2 {
   font-size: 24px; /* Adjust font size */
-
   color: white; /* Text color */
   text-transform: uppercase; /* Convert text to uppercase */
-
   animation: fadeInUp 1s ease; /* Add animation */
 }
 
@@ -450,7 +432,39 @@ a:hover::after {
     transform: translateY(0); /* Move title up */
   }
 }
-.education-block {
+
+#education-section-blocks-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap between blocks */
+  opacity: 0;
+  transition: opacity 2s ease; /* Smooth transition */
+  animation: fadeInAnimation 2s ease forwards; /* Animation to fade in */
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#education-section-blocks-container.visible {
+  opacity: 1;
+}
+
+.education-list {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  padding: 0;
+  margin: 0;
+  list-style-type: none; /* Remove bullet points */
+  justify-content: space-evenly;
+}
+
+.education-list-item {
   width: 25%;
   background: black; /* Semi-transparent white background */
   border-radius: 8px;
@@ -461,7 +475,7 @@ a:hover::after {
   margin-bottom: 20px;
 }
 
-.education-block:hover {
+.education-list-item:hover {
   transform: translateY(-5px); /* Move block up slightly on hover */
 }
 
@@ -475,21 +489,18 @@ a:hover::after {
   font-size: 1.25em;
 }
 
-.education-list {
-  margin-top: 10px; /* Margin above list */
-  list-style-type: none; /* Remove bullet points */
+.certifications-list {
   padding: 0;
+  margin: 0;
+  list-style-type: none; /* Remove bullet points */
 }
 
-.education-list li {
+.certifications-list li {
   padding: 5px 0; /* Vertical padding */
   color: white;
   font-size: 1.25em;
 }
-#education-section-title {
-  margin-bottom: 20px;
-  height: fit-content;
-}
+
 #skills-lists-container {
   width: 40vw;
   background: black; /* Semi-transparent white background */
@@ -535,32 +546,31 @@ a:hover::after {
   #skills-lists-container:hover {
     transform: none; /* Disable scaling on hover */
   }
-  #education-section-container {
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
+  .education-list {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
   }
-  #education-section-blocks-container {
+
+  .education-list-item {
+    width: 80%; /* Adjust item width to fit screen width */
+    margin: 10px 0; /* Vertical spacing between items */
   }
-  #education-block {
-    width: fit-content;
-    height: fit-content;
-  }
+
   #project-section {
     flex-direction: column;
-    width: fit-content;
+    width: 100%;
     margin: 0; /* Remove left margin */
   }
   #project-section ul {
     padding: 0;
-    width: fit-content;
+    width: 100%;
   }
   .project-card {
     width: fit-content;
     height: fit-content;
   }
   #footer {
-    width: fit-content;
+    width: 100%;
     height: fit-content;
   }
 }
