@@ -440,6 +440,7 @@ a:hover::after {
   opacity: 0;
   transition: opacity 2s ease; /* Smooth transition */
   animation: fadeInAnimation 2s ease forwards; /* Animation to fade in */
+  margin-bottom: 20%;
 }
 
 @keyframes fadeInAnimation {
