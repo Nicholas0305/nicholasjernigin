@@ -1,3 +1,6 @@
+html {
+  font-size: 16px; /* Base font size */
+}
 body {
   background-color: black;
   color: white;
@@ -507,7 +510,6 @@ a:hover::after {
   margin-bottom: 20px;
   display: flex;
   justify-content: space-evenly;
-  box-sizing: border-box;
 }
 
 #skills-lists-container:hover {
@@ -518,6 +520,12 @@ a:hover::after {
 @media only screen and (max-width: 700px) {
   body {
     overflow-x: hidden;
+  }
+  p {
+    font-size: 1rem;
+  }
+  li {
+    font-size: 1rem;
   }
   .navbar {
     padding: 5px; /* Decrease padding for the navbar */
@@ -540,7 +548,7 @@ a:hover::after {
   }
 
   #skills-lists-container {
-    width: 85%;
+    width: 80%;
     height: auto;
     font-size: small;
   }
@@ -585,6 +593,8 @@ a:hover::after {
     width: fit-content;
     height: fit-content;
   }
+  .committedTo-paragraph {
+  }
   #footer {
     width: 100%;
     height: fit-content;
@@ -609,6 +619,7 @@ a:hover::after {
   justify-content: center;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 .committedTo-card {
   background: black; /* Semi-transparent white background */
@@ -618,11 +629,12 @@ a:hover::after {
     inset 0 0 20px rgba(255, 255, 255, 0.5); /* Box shadow and inner shadow */
   margin-bottom: 20px;
   font-size: 1.25em;
-  width: 70%;
+  width: 80%;
   height: fit-content;
   opacity: 0; /* Initially set opacity to 0 */
   transform: translateY(20px); /* Initially move block down */
   animation: fadeAndMoveUp 0.5s ease forwards; /* Apply animation */
+  /* box-sizing: border-box; */
 }
 
 @keyframes fadeAndMoveUp {
