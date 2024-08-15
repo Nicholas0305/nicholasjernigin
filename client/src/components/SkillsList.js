@@ -24,7 +24,7 @@ function SkillsList() {
 
   return (
     <div className={isScrolled ? "skills-container" : ""}>
-      <div>
+      <div id="skills-image-container">
         <div id="skills-header-container">
           <h1 id="skills-header">Skills</h1>
           <h1 id="skills-description">

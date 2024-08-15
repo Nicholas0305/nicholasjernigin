@@ -135,6 +135,7 @@ body {
 .skills-container {
   display: flex;
   justify-content: space-evenly;
+  width: 100%;
 }
 .skills-container {
   opacity: 0;
@@ -152,17 +153,6 @@ body {
     transform: translateX(0);
   }
 }
-.skills-container > div {
-  margin-right: 20px;
-}
-
-.skills-container > div:last-child {
-  margin-right: 0;
-}
-
-.skills-container h1 {
-  margin-bottom: 5px;
-}
 
 .skills-container ul {
   padding: 0;
@@ -178,6 +168,9 @@ body {
 #skills-image {
   border-radius: 5px;
   margin-top: 10px;
+  margin-bottom: 5%;
+  box-sizing: border-box;
+  width: fit-content;
 }
 #bg-video {
   margin-top: 60px;
@@ -369,7 +362,6 @@ a:hover::after {
 #project-header {
   margin-right: 50px;
   display: flex;
-  justify-content: space-evenly;
 }
 #hammer-icon {
   margin-left: 5px;
@@ -515,6 +507,7 @@ a:hover::after {
   margin-bottom: 20px;
   display: flex;
   justify-content: space-evenly;
+  box-sizing: border-box;
 }
 
 #skills-lists-container:hover {
@@ -523,6 +516,9 @@ a:hover::after {
 
 /* For screens smaller than 768px (typical phone portrait mode) */
 @media only screen and (max-width: 700px) {
+  body {
+    overflow-x: hidden;
+  }
   .navbar {
     padding: 5px; /* Decrease padding for the navbar */
     width: 100%;
@@ -540,10 +536,13 @@ a:hover::after {
 
   .skills-container {
     flex-direction: column; /* Stack skills vertically */
+    align-items: center;
   }
 
   #skills-lists-container {
-    width: 100%; /* Adjust width to fit smaller screens */
+    width: 85%;
+    height: auto;
+    font-size: small;
   }
 
   #skills-lists-container:hover {
@@ -558,7 +557,21 @@ a:hover::after {
     width: 80%; /* Adjust item width to fit screen width */
     margin: 10px 0; /* Vertical spacing between items */
   }
-
+  #project-header {
+    margin-right: 0;
+  }
+  .vertical-line {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black; /* Adjust thickness and color as needed */
+    height: auto;
+    width: auto;
+    padding: 20px;
+    justify-content: left !important;
+    text-align: left !important;
+    align-items: center !important; /* Center horizontally */
+    display: flex !important;
+    flex-direction: column !important;
+  }
   #project-section {
     flex-direction: column;
     width: 100%;
