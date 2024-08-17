@@ -315,6 +315,7 @@ a:hover::after {
 #footer-list-container {
   display: flex;
   justify-content: space-evenly;
+  width: 100%;
 }
 
 #end-message-container {
@@ -333,7 +334,7 @@ a:hover::after {
 }
 #send-email-container {
   height: fit-content;
-
+  width: 100%;
   display: flex;
   padding: 5px;
   justify-content: center;
@@ -520,14 +521,9 @@ a:hover::after {
 @media only screen and (max-width: 700px) {
   body {
     overflow-x: hidden;
-    /* max-width: 100vw !important; */
+    max-width: 100vw !important;
   }
-  p {
-    font-size: 1rem;
-  }
-  li {
-    font-size: 1rem;
-  }
+
   .navbar {
     padding: 5px; /* Decrease padding for the navbar */
     width: 100%;
