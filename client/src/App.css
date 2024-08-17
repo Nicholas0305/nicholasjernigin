@@ -520,6 +520,7 @@ a:hover::after {
 @media only screen and (max-width: 700px) {
   body {
     overflow-x: hidden;
+    /* max-width: 100vw !important; */
   }
   p {
     font-size: 1rem;
@@ -593,8 +594,11 @@ a:hover::after {
     width: fit-content;
     height: fit-content;
   }
-  .committedTo-paragraph {
-  }
+  /* .committedTo-section-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  } */
   #footer {
     width: 100%;
     height: fit-content;
