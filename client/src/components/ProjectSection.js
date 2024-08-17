@@ -55,7 +55,7 @@ function ProjectSection() {
               link: "https://github.com/ekollie/Pomodoro",
             },
             {
-              name: "Personal Website",
+              name: "Website",
               imageUrl: websitePicture,
               link: "https://github.com/Nicholas0305/nicholasjernigin",
             },

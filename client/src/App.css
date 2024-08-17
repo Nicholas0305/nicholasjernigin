@@ -314,7 +314,7 @@ a:hover::after {
 
 #footer-list-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -581,13 +581,20 @@ a:hover::after {
     flex-direction: column;
     width: 100%;
     margin: 0; /* Remove left margin */
+    align-items: center !important;
+    justify-content: center !important;
+    display: flex;
   }
-  #project-section ul {
+  #project-section-list {
     padding: 0;
     width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    display: flex;
   }
   .project-card {
-    width: fit-content;
+    width: 85%;
     height: fit-content;
   }
   /* .committedTo-section-container {
