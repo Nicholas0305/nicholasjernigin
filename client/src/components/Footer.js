@@ -21,7 +21,7 @@ function Footer() {
           <h1>Contact Me</h1>
           <ul>
             <li>
-              <a href="sms:+1234567890&body=Hello%20there!">
+              <a href="sms:+12817948636&body=Hello%20there!">
                 281-794-8636 <FontAwesomeIcon icon={faPhone} />
               </a>
             </li>
