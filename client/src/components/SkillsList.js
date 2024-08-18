@@ -1,36 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCheckCircle,
-  faTools,
-  faHandshake,
-} from "@fortawesome/free-solid-svg-icons";
-import skillsImg from "../pictures/skills.png";
+import { faTools, faHandshake } from "@fortawesome/free-solid-svg-icons";
 
 function SkillsList() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
-    <div className={isScrolled ? "skills-container" : ""}>
+    <div className="skills-container">
       <div id="skills-container">
         <div id="skills-header-container">
           <h1 id="skills-header">Skills</h1>
-          {/* <h1 id="skills-description">
-            {"  "}
-            to pay the bills <FontAwesomeIcon icon={faCheckCircle} />
-          </h1> */}
         </div>
 
         <div id="skills-lists-container">

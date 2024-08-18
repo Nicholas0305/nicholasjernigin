@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faHammer } from "@fortawesome/free-solid-svg-icons";
@@ -8,19 +8,6 @@ import pomodoro from "../pictures/pomodoro.png";
 import websitePicture from "../pictures/personal_website.png";
 
 function ProjectSection() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 925);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
     <div id="project-section-container">
       <div id="project-section">
@@ -61,8 +48,8 @@ function ProjectSection() {
             },
           ].map((project, index) => (
             <li key={index} className="project-list-li">
-              <div className={isScrolled ? "project-card" : "null"}>
-                <img src={project.imageUrl} alt="Project " />
+              <div className="project-card">
+                <img src={project.imageUrl} alt={project.name} />
                 <a href={project.link} className="project-description">
                   {project.name}
                 </a>
