@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import portrait from "../pictures/portrait.png";
+import Divider from "@mui/material/Divider";
+
 function IntroSection() {
   return (
     <div id="intro-section">
@@ -35,6 +37,7 @@ function IntroSection() {
           Github <FontAwesomeIcon icon={faGithub} />
         </a>
       </div>
+      {/* <Divider className="divider" /> */}
     </div>
   );
 }
