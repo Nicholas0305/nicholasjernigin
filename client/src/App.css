@@ -9,7 +9,6 @@ body {
 * {
   max-width: 100% !important;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 /* Navbar */
 .navbar {
@@ -129,6 +128,7 @@ body {
   opacity: 0;
   transform: translateZ(-100px);
   animation: slideInAnimation 1s ease-in-out forwards;
+  margin-right: 2%;
 }
 
 @keyframes slideInAnimation {
@@ -529,16 +529,21 @@ a:hover::after {
     width: 100%;
     height: fit-content;
   }
-
-  .intro-body {
-    width: 80%; /* Adjust width to fit smaller screens */
-    margin-right: 0; /* Remove right margin */
-  }
-
   #intro-section {
     margin-bottom: 100px; /* Decrease bottom margin */
   }
 
+  #portrait {
+    height: fit-content;
+    width: 30%;
+    margin-bottom: 5%;
+  }
+
+  .intro-body {
+    width: 80%; /* Adjust width to fit smaller screens */
+    margin-right: 0; /* Remove right margin */
+    font-size: small;
+  }
   .skills-container {
     flex-direction: column; /* Stack skills vertically */
     align-items: center;

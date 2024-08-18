@@ -6,6 +6,14 @@ import portrait from "../pictures/portrait.png";
 function IntroSection() {
   return (
     <div id="intro-section">
+      <img
+        id="portrait"
+        src={portrait}
+        width="300"
+        height="500"
+        alt="portrait"
+      />
+
       <div className="intro-body">
         <h2>
           Hi I'm Nick, a Full Stack Software Engineer{" "}
@@ -26,15 +34,6 @@ function IntroSection() {
         <a className="animated-a" href="https://github.com/Nicholas0305">
           Github <FontAwesomeIcon icon={faGithub} />
         </a>
-      </div>
-      <div>
-        <img
-          id="portrait"
-          src={portrait}
-          width="300"
-          height="500"
-          alt="portrait"
-        />
       </div>
     </div>
   );
