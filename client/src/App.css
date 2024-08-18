@@ -60,6 +60,7 @@ body {
   margin-bottom: 300px;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 .intro-body {
   width: 25%;
@@ -175,14 +176,7 @@ body {
   box-sizing: border-box;
   width: fit-content;
 }
-#bg-video {
-  margin-top: 60px;
-  z-index: -1;
-  width: 100vw;
-  height: 200px;
-  object-fit: cover;
-  filter: "brightness(10%)";
-}
+
 #project-section-container {
   margin-top: 250px;
   margin-bottom: 250px;
@@ -610,13 +604,13 @@ a:hover::after {
     font-size: 60%;
   }
   #contact-container {
-    font-size: 45%;
+    font-size: 50%;
   }
   #socials-container {
-    font-size: 45%;
+    font-size: 50%;
   }
   #community-container {
-    font-size: 45%;
+    font-size: 50%;
   }
 }
 
@@ -626,7 +620,11 @@ a:hover::after {
   justify-content: center;
   align-items: center;
   justify-content: center;
+
   width: 100%;
+}
+#committedTo-section-container h1 {
+  text-align: center;
 }
 .committedTo-card {
   background: black; /* Semi-transparent white background */
