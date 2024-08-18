@@ -558,7 +558,7 @@ a:hover::after {
   #skills-lists-container {
     width: 80%;
     height: auto;
-    font-size: small;
+    /* font-size: small; */
   }
 
   #skills-lists-container:hover {

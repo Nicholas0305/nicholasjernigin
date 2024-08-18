@@ -4,11 +4,11 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 function Navbar() {
   return (
     <nav className="navbar">
-      <a href="#intro-section">
-        <h2>
-          <FontAwesomeIcon icon={faGlobe} /> Nicholas Jernigin
-        </h2>
-      </a>
+      {/* <a href="#intro-section"> */}
+      <h2>
+        <FontAwesomeIcon icon={faGlobe} /> Nicholas Jernigin
+      </h2>
+      {/* </a> */}
     </nav>
   );
 }
