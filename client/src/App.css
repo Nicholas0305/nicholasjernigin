@@ -27,13 +27,16 @@ body {
   z-index: 1000;
   box-sizing: border-box;
 }
-
+.navbar a {
+  width: fit-content;
+}
 .navbar h2 {
   position: relative;
   font-weight: bold;
   margin-left: 15px;
   cursor: pointer;
   transition: color 0.3s;
+  width: fit-content;
 }
 
 .navbar h2:hover {
@@ -77,8 +80,7 @@ body {
     inset 0 0 20px rgba(255, 255, 255, 0.5); /* Box shadow and inner shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
   margin-bottom: 20px;
-  max-width: 250px;
-  margin-right: 50px;
+
   opacity: 0;
   transform: translateY(50px);
   animation: fadeInSlideAnimation 3s ease-in-out forwards;
@@ -89,7 +91,7 @@ body {
 }
 .null {
   opacity: 0;
-  left: -300%;
+  left: -500%;
 }
 @keyframes fadeInSlideAnimation {
   0% {
@@ -144,10 +146,9 @@ body {
 
 .skills-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-}
-.skills-container {
   opacity: 0;
   transform: translateX(-200%);
   animation: slideInFromLeft 1s forwards;
@@ -164,23 +165,23 @@ body {
   }
 }
 
+#skills-container {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .skills-container ul {
   padding: 0;
   list-style-type: none;
 }
 
 .skills-container ul li {
-  margin-bottom: 5px;
-  font-size: 20px;
+  margin-bottom: 5%;
+
   color: grey;
   font-style: oblique;
-}
-#skills-image {
-  border-radius: 5px;
-  margin-top: 10px;
-  margin-bottom: 5%;
-  box-sizing: border-box;
-  width: fit-content;
 }
 
 #project-section-container {
@@ -374,6 +375,7 @@ a:hover::after {
   display: flex; /* Use flexbox */
   align-items: center; /* Align items vertically */
   cursor: pointer;
+  width: fit-content;
 }
 
 #skills-description {
