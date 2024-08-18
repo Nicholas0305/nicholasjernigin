@@ -12,7 +12,7 @@ function Footer() {
   return (
     <footer id="footer">
       <div id="send-email-container">
-        <a href="mailto:your-email@example.com?subject=Hello%20from%20your%20website&body=Hi%20there,">
+        <a href="mailto:your-najernigin@gmail.com?subject=Hello%20from%20your%20website&body=Hi%20there,">
           Shoot me an email <FontAwesomeIcon icon={faEnvelope} />
         </a>
       </div>
