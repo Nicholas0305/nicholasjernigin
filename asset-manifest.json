@@ -1,21 +1,20 @@
 {
   "files": {
     "main.css": "/nicholasjernigin/static/css/main.2ca9b3ec.css",
-    "main.js": "/nicholasjernigin/static/js/main.e929a902.js",
+    "main.js": "/nicholasjernigin/static/js/main.15fef98d.js",
     "static/js/453.419a5d54.chunk.js": "/nicholasjernigin/static/js/453.419a5d54.chunk.js",
     "static/media/portrait.png": "/nicholasjernigin/static/media/portrait.1b376d9c67276ee95009.png",
     "static/media/personal_website.png": "/nicholasjernigin/static/media/personal_website.c46909f01f04f0700cf4.png",
     "static/media/pomodoro.png": "/nicholasjernigin/static/media/pomodoro.3713b5492eca4d7264da.png",
     "static/media/amirite.png": "/nicholasjernigin/static/media/amirite.9f24d02f0929d8c0b46b.png",
     "static/media/emailtrace.png": "/nicholasjernigin/static/media/emailtrace.92f4a49e2e55d83cc56c.png",
-    "static/media/skills.png": "/nicholasjernigin/static/media/skills.2d40025968960a6295de.png",
     "index.html": "/nicholasjernigin/index.html",
     "main.2ca9b3ec.css.map": "/nicholasjernigin/static/css/main.2ca9b3ec.css.map",
-    "main.e929a902.js.map": "/nicholasjernigin/static/js/main.e929a902.js.map",
+    "main.15fef98d.js.map": "/nicholasjernigin/static/js/main.15fef98d.js.map",
     "453.419a5d54.chunk.js.map": "/nicholasjernigin/static/js/453.419a5d54.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2ca9b3ec.css",
-    "static/js/main.e929a902.js"
+    "static/js/main.15fef98d.js"
   ]
 }
